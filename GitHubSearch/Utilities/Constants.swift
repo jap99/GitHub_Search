@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+
+enum Constants {
+    
+    static let UserCellID: String = "UserCell"
+    static let RepoCellID: String = "RepoCell"
+    
+    static let goToUserDetailsVC: String = "goToMemberDetailsVC"
+}

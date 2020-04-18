@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+extension URLSession: NetworkEngineProtocol {       // lets us focus on the NetworkEngine API instead of creating multiple mocks in our tests
+    
+    func performRequest(for url: URL, completionHandler: @escaping NetworkEngineProtocol.Handler) {
+        let task = dataTask(with: url, completionHandler: completionHandler)
+        task.resume()
+    }
+    
+}

@@ -11,6 +11,8 @@ import UIKit
 class UserCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var repoCountLabel: UILabel!
     
     
     

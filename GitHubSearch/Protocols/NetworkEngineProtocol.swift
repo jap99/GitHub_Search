@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+
+protocol NetworkEngineProtocol: class {
+    typealias Handler = (Data?, URLResponse?, Error?) -> Void
+    func performRequest(for url: URL, completionHandler: @escaping Handler)
+}
+
+

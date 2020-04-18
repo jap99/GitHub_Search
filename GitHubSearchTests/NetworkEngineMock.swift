@@ -10,6 +10,7 @@ import Foundation
 
 
 class NetworkEngineMock: NetworkEngine {
+   
     typealias Handler = NetworkEngine.Handler
     
     var requestedURL: URL?
@@ -19,5 +20,8 @@ class NetworkEngineMock: NetworkEngine {
         let data = "Hello, world".data(using: .utf8)
         completionHandler(data, nil, nil)
     }
+    
+    
+    
 }
 

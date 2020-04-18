@@ -10,6 +10,8 @@ import UIKit
 
 class UserDetailsVC: UIViewController {
 
+    var vm = UserVM()
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
