@@ -65,5 +65,10 @@ struct UserVM {                 // Provides data to the UI
         self.user?.bio ?? nil
     }
     
+    
+    func setupSearchBarPlaceholderTextColor() {
+          UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+      }
+    
 }
 

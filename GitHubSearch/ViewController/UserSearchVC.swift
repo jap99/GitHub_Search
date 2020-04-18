@@ -8,10 +8,10 @@
 
 import UIKit
 
-class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
   
 //    var usersArray: UserList?
-    private var userListVM: UserListVM!
+    private var userListVM: UserListVM?
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tv: UITableView!
@@ -30,10 +30,15 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         self.tv.delegate = self
         self.tv.dataSource = self
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.view.backgroundColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
+        setupSearchBarPlaceholderTextColor()
+        self.searchBar.searchTextField.delegate = self
+
+        view.layer.shadowOffset = CGSize(width: 0 , height:-12)
         NetworkEngine().searchForUsers(for: "jap") { [weak self] (users) in
             if !users!.isEmpty {
                 print(users)
-                self?.userListVM.usersVM = users!.map(UserVM.init)
+                self?.userListVM?.usersVM = users!.map(UserVM.init)
 //                self.userListVM = UserListVM(users: users!)
                 print(users!)
                 DispatchQueue.main.async {
@@ -42,6 +47,8 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             }
         }
     }
+    
+
     
     //        NetworkEngine().getUsers { (response) in
     //            switch response {
@@ -55,34 +62,54 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     //        }
     // MARK: - ACTIONS
     
+    func setupSearchBarPlaceholderTextColor() {
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+    }
     
     // MARK: - TABLE VIEW
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UserCellID, for: indexPath) as? UserCell else {
-            fatalError("Table view cell not found")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UserCellID, for: indexPath) as? UserCell,
+            let userVM = self.userListVM?.userAt(indexPath.row) else {
+//                fatalError("Table view cell not found")
+                return UITableViewCell()
         }
-        let userVM = self.userListVM.userAt(indexPath.row)
-        cell.profileImageView.image = userVM.profileImage
-        cell.usernameLabel.text = userVM.username
-        cell.repoCountLabel.text = userVM.repoCount
+        cell.configure(userVM)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.userListVM.numberOfRowsInSection(section))
-        return self.userListVM.numberOfRowsInSection(section)
+//        print(self.userListVM.numberOfRowsInSection(section))
+        return 10
+//        return self.userListVM?.numberOfRowsInSection(section)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.userListVM == nil ? 0 : self.userListVM.numberOfSections
+        return 1
+//        return self.userListVM == nil ? 0 : self.userListVM.numberOfSections
     }
     
+
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        DispatchQueue.main.async {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
         performSegue(withIdentifier: Constants.goToUserDetailsVC, sender: Any?.self)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125.0
+    }
  
+    
+    // MARK: - UITEXTFIELD_DELEGATE
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
+    
     
     // MARK: - SEGUE
     

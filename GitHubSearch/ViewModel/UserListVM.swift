@@ -7,8 +7,30 @@
 //
 
 import Foundation
-
+import UIKit
  
+//struct WeatherViewModel: Decodable {
+//
+//    let name: Dynamic<String>
+//    var currentTemperature: TemperatureViewModel
+//
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        self.name = Dynamic(try container.decode(String.self, forKey: .name))
+//        self.currentTemperature = try container.decode(TemperatureViewModel.self, forKey: .currentTemperature)
+//    }
+//
+//    private enum CodingKeys: String, CodingKey {
+//        case name
+//        case currentTemperature = "main"
+//    }
+//
+//
+//
+//}
+
+
+
 struct UserListVM {
     
 //    let users: [User]
@@ -18,22 +40,25 @@ struct UserListVM {
         self.usersVM = [UserVM]()
     }
     
+//    private var weatherViewModels = [WeatherViewModel]()
+//
+//    mutating func addWeatherViewModel(_ vm: WeatherViewModel) {
+//        self.weatherViewModels.append(vm)
+//    }
     
     var numberOfSections: Int {
         return 1
     }
     
     func numberOfRowsInSection(_ section: Int) -> Int {
-//        self.usersVM.
-//        return self.users.count
-        return 10
+        self.usersVM.count
     }
     
     func userAt(_ indexPath: Int) -> UserVM {
         return self.usersVM[indexPath]
-//        let user = self.users[indexPath]
-//        return UserVM(user)
     }
     
-    
+    func setupSearchBarPlaceholderTextColor() {
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+    }
 }

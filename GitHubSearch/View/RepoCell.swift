@@ -14,6 +14,11 @@ class RepoCell: UITableViewCell {
     @IBOutlet weak var forksCountLabel: UILabel!
     @IBOutlet weak var starsCountLabel: UILabel!
     
+    func configure(_ vm: UserVM) {
+        self.starsCountLabel.text = "123"
+        self.nameLabel.text = "Javid"
+        self.forksCountLabel.text = "Javid ABC"
+    }
     
     
 }

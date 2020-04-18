@@ -30,6 +30,8 @@
 		9F68BFFD244B8B3A00123A7B /* BindingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68BFFC244B8B3A00123A7B /* BindingSearchTextField.swift */; };
 		9F68BFFE244B918D00123A7B /* NetworkEngineMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290AD243B93C900F2B0A8 /* NetworkEngineMock.swift */; };
 		9F68BFFF244B919600123A7B /* NetworkEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290B5243BA37200F2B0A8 /* NetworkEngineProtocol.swift */; };
+		9F68C005244BA5BB00123A7B /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C004244BA5BB00123A7B /* Dynamic.swift */; };
+		9F68C007244BBC7B00123A7B /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C006244BBC7B00123A7B /* UIImageView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		9F2290BE243BB6AA00F2B0A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F68BFF4244B6C5300123A7B /* UserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVM.swift; sourceTree = "<group>"; };
 		9F68BFFC244B8B3A00123A7B /* BindingSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingSearchTextField.swift; sourceTree = "<group>"; };
+		9F68C004244BA5BB00123A7B /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		9F68C006244BBC7B00123A7B /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				9F2290AA243B892400F2B0A8 /* User.swift */,
+				9F68C004244BA5BB00123A7B /* Dynamic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			children = (
 				9F2290B3243BA35300F2B0A8 /* URLSession+Ext.swift */,
 				9F2290BA243BAD5700F2B0A8 /* UIImage+Ext.swift */,
+				9F68C006244BBC7B00123A7B /* UIImageView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,7 +332,9 @@
 				9F2290BB243BAD5700F2B0A8 /* UIImage+Ext.swift in Sources */,
 				9F2290A4243B7BD800F2B0A8 /* UserCell.swift in Sources */,
 				9F2290BF243BB6AA00F2B0A8 /* Constants.swift in Sources */,
+				9F68C005244BA5BB00123A7B /* Dynamic.swift in Sources */,
 				9F22907724381B7300F2B0A8 /* SceneDelegate.swift in Sources */,
+				9F68C007244BBC7B00123A7B /* UIImageView+Ext.swift in Sources */,
 				9F2290B6243BA37200F2B0A8 /* NetworkEngineProtocol.swift in Sources */,
 				9F68BFFE244B918D00123A7B /* NetworkEngineMock.swift in Sources */,
 				9F2290A6243B7C0300F2B0A8 /* RepoCell.swift in Sources */,
