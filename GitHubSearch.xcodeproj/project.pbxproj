@@ -28,6 +28,8 @@
 		9F2290BF243BB6AA00F2B0A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290BE243BB6AA00F2B0A8 /* Constants.swift */; };
 		9F68BFF5244B6C5300123A7B /* UserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68BFF4244B6C5300123A7B /* UserListVM.swift */; };
 		9F68BFFD244B8B3A00123A7B /* BindingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68BFFC244B8B3A00123A7B /* BindingSearchTextField.swift */; };
+		9F68BFFE244B918D00123A7B /* NetworkEngineMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290AD243B93C900F2B0A8 /* NetworkEngineMock.swift */; };
+		9F68BFFF244B919600123A7B /* NetworkEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290B5243BA37200F2B0A8 /* NetworkEngineProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -326,6 +328,7 @@
 				9F2290BF243BB6AA00F2B0A8 /* Constants.swift in Sources */,
 				9F22907724381B7300F2B0A8 /* SceneDelegate.swift in Sources */,
 				9F2290B6243BA37200F2B0A8 /* NetworkEngineProtocol.swift in Sources */,
+				9F68BFFE244B918D00123A7B /* NetworkEngineMock.swift in Sources */,
 				9F2290A6243B7C0300F2B0A8 /* RepoCell.swift in Sources */,
 				9F2290B4243BA35300F2B0A8 /* URLSession+Ext.swift in Sources */,
 				9F2290B2243BA0E100F2B0A8 /* UserVM.swift in Sources */,
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F68BFFF244B919600123A7B /* NetworkEngineProtocol.swift in Sources */,
 				9F2290B0243B93DE00F2B0A8 /* NetworkEngineMock.swift in Sources */,
 				9F2290AC243B937A00F2B0A8 /* NetworkEngine.swift in Sources */,
 				9F22908C24381B7400F2B0A8 /* GitHubSearchTests.swift in Sources */,

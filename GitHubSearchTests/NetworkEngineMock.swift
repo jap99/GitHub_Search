@@ -9,10 +9,8 @@
 import Foundation
 
 
-class NetworkEngineMock: NetworkEngine {
-   
-    typealias Handler = NetworkEngine.Handler
-    
+class NetworkEngineMock: NetworkEngine, NetworkEngineProtocol {
+
     var requestedURL: URL?
     
     func performRequest(for url: URL, completionHandler: @escaping Handler) {
