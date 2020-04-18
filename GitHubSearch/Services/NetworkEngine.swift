@@ -48,9 +48,7 @@ enum Endpoint {
 
 class NetworkEngine {
     
-    private let engine: NetworkEngineProtocol 
-    private let queue = DispatchQueue(label: "Concurrent Queue", attributes: .concurrent)
-    let group = DispatchGroup()
+    private let engine: NetworkEngineProtocol
     
     init(engine: NetworkEngineProtocol = URLSession.shared) {
         self.engine = engine
@@ -66,7 +64,6 @@ class NetworkEngine {
                 if let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any],
                     let users = json["items"] as? [[String: Any]] {
                     for u in users {
-                        self.group.enter()
                         if let username = u["login"] as? String,
                             let url = u["avatar_url"] as? String {
                             let user = User(username, url)

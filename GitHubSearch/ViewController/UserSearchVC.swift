@@ -29,7 +29,7 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     private func setup() {
         self.tv.delegate = self
         self.tv.dataSource = self
-        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         NetworkEngine().searchForUsers(for: "jap") { [weak self] (users) in
             if !users!.isEmpty {
                 print(users)
