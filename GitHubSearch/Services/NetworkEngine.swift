@@ -26,7 +26,7 @@ enum Endpoint {
         case .getUserDetails:
             return "https://api.github.com/search/users?q=user:[searchTerm]"
         case .getRepositories:
-            return "https://api.github.com/search/repositories?q=user:[searchTerm]"
+            return "https://api.github.com/search/repositories?q=user:[searchTerm] "
         case .getStarCount:
             return "https://api.github.com/users/[searchTerm]/starred"
         }

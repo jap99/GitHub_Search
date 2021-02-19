@@ -23,15 +23,22 @@
 		9F2290B0243B93DE00F2B0A8 /* NetworkEngineMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290AD243B93C900F2B0A8 /* NetworkEngineMock.swift */; };
 		9F2290B2243BA0E100F2B0A8 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290B1243BA0E100F2B0A8 /* UserVM.swift */; };
 		9F2290B4243BA35300F2B0A8 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290B3243BA35300F2B0A8 /* URLSession+Ext.swift */; };
-		9F2290B6243BA37200F2B0A8 /* NetworkEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290B5243BA37200F2B0A8 /* NetworkEngineProtocol.swift */; };
+		9F2290B6243BA37200F2B0A8 /* NetworkEngine_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290B5243BA37200F2B0A8 /* NetworkEngine_Protocol.swift */; };
 		9F2290BB243BAD5700F2B0A8 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290BA243BAD5700F2B0A8 /* UIImage+Ext.swift */; };
 		9F2290BF243BB6AA00F2B0A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290BE243BB6AA00F2B0A8 /* Constants.swift */; };
 		9F68BFF5244B6C5300123A7B /* UserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68BFF4244B6C5300123A7B /* UserListVM.swift */; };
 		9F68BFFD244B8B3A00123A7B /* BindingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68BFFC244B8B3A00123A7B /* BindingSearchTextField.swift */; };
 		9F68BFFE244B918D00123A7B /* NetworkEngineMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290AD243B93C900F2B0A8 /* NetworkEngineMock.swift */; };
-		9F68BFFF244B919600123A7B /* NetworkEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290B5243BA37200F2B0A8 /* NetworkEngineProtocol.swift */; };
+		9F68BFFF244B919600123A7B /* NetworkEngine_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2290B5243BA37200F2B0A8 /* NetworkEngine_Protocol.swift */; };
 		9F68C005244BA5BB00123A7B /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C004244BA5BB00123A7B /* Dynamic.swift */; };
 		9F68C007244BBC7B00123A7B /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C006244BBC7B00123A7B /* UIImageView+Ext.swift */; };
+		9F68C009244BD3D000123A7B /* UserDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C008244BD3D000123A7B /* UserDetailVM.swift */; };
+		9F68C00B244BD45F00123A7B /* UserDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C00A244BD45F00123A7B /* UserDetailDelegate.swift */; };
+		9F68C00D244BD53E00123A7B /* VM_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C00C244BD53E00123A7B /* VM_Protocol.swift */; };
+		9F68C00F244BD55500123A7B /* TableVM_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C00E244BD55500123A7B /* TableVM_Protocol.swift */; };
+		9F68C011244BD56900123A7B /* CellVM_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C010244BD56900123A7B /* CellVM_Protocol.swift */; };
+		9F68C013244BD93D00123A7B /* TableViewCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C012244BD93D00123A7B /* TableViewCellVM.swift */; };
+		9F68C019244BE16E00123A7B /* DownloadListener_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F68C018244BE16E00123A7B /* DownloadListener_Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,13 +72,20 @@
 		9F2290AD243B93C900F2B0A8 /* NetworkEngineMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngineMock.swift; sourceTree = "<group>"; };
 		9F2290B1243BA0E100F2B0A8 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		9F2290B3243BA35300F2B0A8 /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
-		9F2290B5243BA37200F2B0A8 /* NetworkEngineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngineProtocol.swift; sourceTree = "<group>"; };
+		9F2290B5243BA37200F2B0A8 /* NetworkEngine_Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine_Protocol.swift; sourceTree = "<group>"; };
 		9F2290BA243BAD5700F2B0A8 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		9F2290BE243BB6AA00F2B0A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F68BFF4244B6C5300123A7B /* UserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVM.swift; sourceTree = "<group>"; };
 		9F68BFFC244B8B3A00123A7B /* BindingSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingSearchTextField.swift; sourceTree = "<group>"; };
 		9F68C004244BA5BB00123A7B /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		9F68C006244BBC7B00123A7B /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		9F68C008244BD3D000123A7B /* UserDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailVM.swift; sourceTree = "<group>"; };
+		9F68C00A244BD45F00123A7B /* UserDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailDelegate.swift; sourceTree = "<group>"; };
+		9F68C00C244BD53E00123A7B /* VM_Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VM_Protocol.swift; sourceTree = "<group>"; };
+		9F68C00E244BD55500123A7B /* TableVM_Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVM_Protocol.swift; sourceTree = "<group>"; };
+		9F68C010244BD56900123A7B /* CellVM_Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellVM_Protocol.swift; sourceTree = "<group>"; };
+		9F68C012244BD93D00123A7B /* TableViewCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellVM.swift; sourceTree = "<group>"; };
+		9F68C018244BE16E00123A7B /* DownloadListener_Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadListener_Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +176,8 @@
 			children = (
 				9F2290B1243BA0E100F2B0A8 /* UserVM.swift */,
 				9F68BFF4244B6C5300123A7B /* UserListVM.swift */,
+				9F68C008244BD3D000123A7B /* UserDetailVM.swift */,
+				9F68C012244BD93D00123A7B /* TableViewCellVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -187,7 +203,12 @@
 		9F2290A1243B72CA00F2B0A8 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9F2290B5243BA37200F2B0A8 /* NetworkEngineProtocol.swift */,
+				9F2290B5243BA37200F2B0A8 /* NetworkEngine_Protocol.swift */,
+				9F68C00A244BD45F00123A7B /* UserDetailDelegate.swift */,
+				9F68C018244BE16E00123A7B /* DownloadListener_Protocol.swift */,
+				9F68C00C244BD53E00123A7B /* VM_Protocol.swift */,
+				9F68C00E244BD55500123A7B /* TableVM_Protocol.swift */,
+				9F68C010244BD56900123A7B /* CellVM_Protocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -322,23 +343,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F68C00B244BD45F00123A7B /* UserDetailDelegate.swift in Sources */,
 				9F22909C24381CFF00F2B0A8 /* UserDetailsVC.swift in Sources */,
 				9F22907924381B7300F2B0A8 /* UserSearchVC.swift in Sources */,
 				9F2290A9243B807300F2B0A8 /* NetworkEngine.swift in Sources */,
 				9F22907524381B7300F2B0A8 /* AppDelegate.swift in Sources */,
 				9F2290AB243B892400F2B0A8 /* User.swift in Sources */,
+				9F68C013244BD93D00123A7B /* TableViewCellVM.swift in Sources */,
 				9F68BFFD244B8B3A00123A7B /* BindingSearchTextField.swift in Sources */,
 				9F68BFF5244B6C5300123A7B /* UserListVM.swift in Sources */,
 				9F2290BB243BAD5700F2B0A8 /* UIImage+Ext.swift in Sources */,
 				9F2290A4243B7BD800F2B0A8 /* UserCell.swift in Sources */,
 				9F2290BF243BB6AA00F2B0A8 /* Constants.swift in Sources */,
 				9F68C005244BA5BB00123A7B /* Dynamic.swift in Sources */,
+				9F68C009244BD3D000123A7B /* UserDetailVM.swift in Sources */,
+				9F68C00F244BD55500123A7B /* TableVM_Protocol.swift in Sources */,
+				9F68C00D244BD53E00123A7B /* VM_Protocol.swift in Sources */,
+				9F68C019244BE16E00123A7B /* DownloadListener_Protocol.swift in Sources */,
 				9F22907724381B7300F2B0A8 /* SceneDelegate.swift in Sources */,
 				9F68C007244BBC7B00123A7B /* UIImageView+Ext.swift in Sources */,
-				9F2290B6243BA37200F2B0A8 /* NetworkEngineProtocol.swift in Sources */,
+				9F2290B6243BA37200F2B0A8 /* NetworkEngine_Protocol.swift in Sources */,
 				9F68BFFE244B918D00123A7B /* NetworkEngineMock.swift in Sources */,
 				9F2290A6243B7C0300F2B0A8 /* RepoCell.swift in Sources */,
 				9F2290B4243BA35300F2B0A8 /* URLSession+Ext.swift in Sources */,
+				9F68C011244BD56900123A7B /* CellVM_Protocol.swift in Sources */,
 				9F2290B2243BA0E100F2B0A8 /* UserVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F68BFFF244B919600123A7B /* NetworkEngineProtocol.swift in Sources */,
+				9F68BFFF244B919600123A7B /* NetworkEngine_Protocol.swift in Sources */,
 				9F2290B0243B93DE00F2B0A8 /* NetworkEngineMock.swift in Sources */,
 				9F2290AC243B937A00F2B0A8 /* NetworkEngine.swift in Sources */,
 				9F22908C24381B7400F2B0A8 /* GitHubSearchTests.swift in Sources */,

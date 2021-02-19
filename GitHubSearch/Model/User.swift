@@ -5,9 +5,12 @@
 //  Created by Javid Poornasir on 4/6/20.
 //  Copyright © 2020 Javid Poornasir. All rights reserved.
 //
- 
+import UIKit
  
 struct User {
+    
+    weak var listener: DownloadListenerProtocol?
+    var serviceController = NetworkEngine()
     
     var username: String!                       // login
     var profileImageURLString: String!          // avatar_url
@@ -19,6 +22,17 @@ struct User {
     var followersCount: Int!
     var followingCount: Int!
     var bio: String!
+    
+    private var image: UIImage?
+    var downloadedImage: UIImage? {
+        get {
+            if image == nil {
+                downloadImage()
+            }
+            return image
+        }
+    }
+    
     
     init(_ username: String, _ profileURL: String) {
         self.username = username
@@ -40,6 +54,25 @@ struct User {
         self.username = un
         self.profileImageURLString = profileImageURL
         self.repoCount = repoCount
+    }
+    
+    
+    // MARK: - ACTIONS
+     
+    func downloadImage() -> () {
+        guard let url  = buildImageDownloadURL() else { return }
+        serviceController.fetchFromURL(urlString: url, success: { data in
+            self.image = UIImage(data: data)
+            self.listener?.didDownloadImage()
+        }, failure: { (error) in })
+    }
+     
+    
+    func buildImageDownloadURL() -> String? {
+        guard let imageName = imageName else {
+            return nil
+        }
+        return "\(baseURL)\(imageName)"
     }
     
     

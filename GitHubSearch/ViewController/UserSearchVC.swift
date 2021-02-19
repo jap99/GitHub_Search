@@ -23,6 +23,12 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         setup()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if let viewModel = userListVM {
+            viewModel.viewDidAppear(animated)
+        }
+    }
+    
     
     // MARK: - SETUP
     
@@ -94,6 +100,9 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         DispatchQueue.main.async {
             tableView.deselectRow(at: indexPath, animated: true)
+            guard let viewModel = self.userListVM else { return }
+            viewModel.selectRow(atIndexPath: indexPath)
+            self.performSegue(withIdentifier: "colorDetailSegue", sender: nil)
         }
         performSegue(withIdentifier: Constants.goToUserDetailsVC, sender: Any?.self)
     }

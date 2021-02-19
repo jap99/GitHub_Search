@@ -23,18 +23,18 @@ import UIKit
 //    private enum CodingKeys: String, CodingKey {
 //        case name
 //        case currentTemperature = "main"
-//    }
-//
-//
+//    } 
 //
 //}
 
-
-
-struct UserListVM {
+struct UserListVM: TableViewModel {
     
-//    let users: [User]
+    
+    var tableTitle: String
+    var user: User?
     var usersVM: [UserVM] // { }
+//    weak var view:
+    fileprivate var selectedIndexPath: IndexPath?
     
     init() {
         self.usersVM = [UserVM]()
@@ -58,7 +58,62 @@ struct UserListVM {
         return self.usersVM[indexPath]
     }
     
+//    func viewModelForSelectedRow() -> UserDetailsVM? { // called in prepareForSegue:
+//    // builds vm for detailVC
+//        guard let selectedIndexPath = selectedIndexPath else {
+//            return nil
+//        }
+//        return UserDetailsVM(view: nil, model: usersVM[selectedIndexPath.row])
+//    }
+    
     func setupSearchBarPlaceholderTextColor() {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+    }
+    
+    
+    // MARK: - TABLE_VIEW_MODEL
+    
+    
+    func numberOfRows() -> Int {
+        self.usersVM.count
+    }
+    
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> CellViewModel? {  // called in cellForRow
+        // builds vm for cell
+//            let row = indexPath.row
+//            if row < 0 || row >= self.coulorData.count {
+//                return nil
+//            }
+//            let cellText = coulorData[row].name
+            return TableViewCellViewModel(view: nil, cellText: "hello")
+    }
+    
+    mutating func selectRow(atIndexPath indexPath: IndexPath) {
+        self.selectedIndexPath = indexPath
+    }
+    
+    func model(forIndexPath indexPath: IndexPath) -> AnyObject? {
+        return AnyObject.self as AnyObject
+//        let row = indexPath.row
+//        if row < 0 || row >= self.coulorData.count {
+//            return nil
+//        }
+//        return coulorData[row] as AnyObject
+    }
+    
+    func viewModelForSelectedRow() -> UserDetailsVM? {  // called in prepareForSegue:
+        //    // builds vm for detailVC
+        //        guard let selectedIndexPath = selectedIndexPath else {
+        //            return nil
+        //        }
+        //        return UserDetailsVM(view: nil, model: usersVM[selectedIndexPath.row])
+    }
+    
+    func viewDidAppear(_ animated: Bool) {
+        <#code#>
+    }
+    
+    func setView(delegate: AnyObject?) {
+//        self.view = delegate as? ColorListTableViewControllerDelegate
     }
 }

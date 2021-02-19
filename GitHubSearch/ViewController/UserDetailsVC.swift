@@ -8,9 +8,10 @@
 
 import UIKit
 
-class UserDetailsVC: UIViewController {
+class UserDetailsVC: UIViewController, UserDetailsDelegate {
+    
 
-    var vm = UserVM()
+    var vm: UserDetailsVM?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -31,9 +32,32 @@ class UserDetailsVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.view.backgroundColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
         self.profileImageView.makeRounded()
-        vm.setupSearchBarPlaceholderTextColor()
+        setupSearchBarPlaceholderTextColor()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        if let viewModel = vm {
+            viewModel.viewDidAppear(animated)
+        }
+    }
+    
+    
+    // MARK: - USER_DETAILS_DELEGATE
+    
+    func setNavigationTitle(_ title: String) -> Void {
+        self.title = title
+    }
+    
+    func setBackgroundColor() {
+        
+    }
+     
+    
+    // MARK: - ACTIONS
+    
+    func setupSearchBarPlaceholderTextColor() {
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+    }
     
 
 }
