@@ -1,10 +1,9 @@
-//
 //  UserDetailsVC.swift
 //  GitHubSearch
 //
 //  Created by Javid Poornasir on 4/6/20.
 //  Copyright © 2020 Javid Poornasir. All rights reserved.
-//
+
 
 import UIKit
 
@@ -23,9 +22,9 @@ class UserDetailsVC: UIViewController, UserDetailsDelegate {
     @IBOutlet weak var bioTextView: UITextView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tv: UITableView!
+
     
-    // Do all the UI setup from the VM
-        // how do I access n.c. & iboutlets from the vm?
+    // MARK: - INIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
