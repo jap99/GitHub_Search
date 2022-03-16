@@ -1,21 +1,21 @@
-//
 //  UserSearchVC.swift
 //  GitHubSearch
 //
 //  Created by Javid Poornasir on 4/6/20.
 //  Copyright © 2020 Javid Poornasir. All rights reserved.
-//
+
 
 import UIKit
 
 class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
   
-//    var usersArray: UserList?
+    var usersArray: UserList?
     private var userListVM: UserListVM?
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tv: UITableView!
     
+  
     // MARK: - INIT
     
     override func viewDidLoad() {
@@ -45,17 +45,12 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             if !users!.isEmpty {
                 print(users)
                 self?.userListVM?.usersVM = users!.map(UserVM.init)
-//                self.userListVM = UserListVM(users: users!)
-                print(users!)
                 DispatchQueue.main.async {
                     self?.tv.reloadData()
                 }
             }
         }
-    }
-    
-
-    
+    } 
     //        NetworkEngine().getUsers { (response) in
     //            switch response {
     //            case .data(let users):
@@ -66,6 +61,8 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     //                print("PRINTING DEFAULT ---")
     //            }
     //        }
+  
+  
     // MARK: - ACTIONS
     
     func setupSearchBarPlaceholderTextColor() {
@@ -77,7 +74,7 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UserCellID, for: indexPath) as? UserCell,
             let userVM = self.userListVM?.userAt(indexPath.row) else {
-//                fatalError("Table view cell not found")
+                // fatalError("Table view cell not found")
                 return UITableViewCell()
         }
         cell.configure(userVM)
@@ -85,14 +82,12 @@ class UserSearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print(self.userListVM.numberOfRowsInSection(section))
-        return 10
-//        return self.userListVM?.numberOfRowsInSection(section)
+        print(self.userListVM.numberOfRowsInSection(section))
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-//        return self.userListVM == nil ? 0 : self.userListVM.numberOfSections
+        // return self.userListVM == nil ? 0 : self.userListVM.numberOfSections
     }
     
 
