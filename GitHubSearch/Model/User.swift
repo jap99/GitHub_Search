@@ -14,7 +14,7 @@ struct User {
     
     var username: String!                       // login
     var profileImageURLString: String!          // avatar_url
-    var repoCount: String!                         // repos
+    var repoCount: String!                      // repos
 
     var email: String!                          // email
     var location: String!                       // location
